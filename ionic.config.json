@@ -2,5 +2,11 @@
   "name": "Travel-Me",
   "app_id": "90525b4e",
   "v2": true,
-  "typescript": true
+  "typescript": true,
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "https://gateway.watsonplatform.net/language-translator/api"
+    }
+  ]
 }
