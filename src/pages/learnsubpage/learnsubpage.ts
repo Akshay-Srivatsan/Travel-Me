@@ -236,7 +236,8 @@ export class LearnSubpagePage {
 
   }
 
-  playAudio() {
-    new Audio('assets/ThankU.m4a').play();
+  playAudio(item) {
+    console.log(item)
+    new Audio('assets/' + item + '.m4a').play();
   }
 }
