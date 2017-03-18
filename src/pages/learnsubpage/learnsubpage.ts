@@ -70,6 +70,7 @@ export class LearnSubpagePage {
       'ninety':'noventa',
       'one hundred':'cien',
       'one thousand':'mil',
+      'zero':'cero',
     },
     "Directions": {
       'left':'izquierda',
@@ -84,7 +85,7 @@ export class LearnSubpagePage {
       'end':'el fin',
       'start':'el comienzo',
       'here':'aquí',
-      'there':'ahí',
+      'there':'allí',
       'north':'el norte',
       'south':'el sur',
       'east':'el este',
@@ -236,8 +237,13 @@ export class LearnSubpagePage {
 
   }
 
+<<<<<<< Updated upstream
   playAudio(item) {
     console.log(item)
     new Audio('assets/' + item.replace('?', '') + '.m4a').play();
+=======
+  playAudio() {
+    new Audio('assets/ThankU.m4a').play();
+>>>>>>> Stashed changes
   }
 }
