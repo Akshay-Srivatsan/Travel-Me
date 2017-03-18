@@ -18,7 +18,7 @@ export class LearnPage {
     "Food",
     "Relationships",
     "Possessions"
-]
+  ]
 
   constructor(public navCtrl: NavController) {
     console.log("Learn");

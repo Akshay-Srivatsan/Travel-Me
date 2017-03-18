@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 import { FillInTheBlankPage } from "../fillintheblank/fillintheblank";
+import { MatchingPage } from "../matching/matching";
 
 @Component({
   selector: 'page-PracticePage',
@@ -19,8 +20,10 @@ export class PracticePage {
 
   }
 
-  loadMatchingGame() {
+  loadTestYourself() {
 
+    this.navCtrl.push(MatchingPage),{
+    }
   }
 
 }

@@ -10,8 +10,11 @@
   <ion-item-group>
     <ion-card *ngFor="let item of phraseKeys">
 
-      <ion-card-header>
+      <ion-card-header >
         {{item}}
+        <button class="megaphoneButton" ion-button icon-left item-right>
+         <ion-icon name="megaphone"></ion-icon>
+        </button>
       </ion-card-header>
 
       <ion-card-content>
