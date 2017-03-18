@@ -159,10 +159,19 @@ export class MatchingPage {
     alert.present();
   }
 
-  verifyChoice(event, question, answer) {
-    var button = event.target.parentElement;
-    console.log(button);
-    button.setAttribute('color', 'danger');
+  verifyChoice(event, question) {
+    console.log(event);
+    var element = event.srcElement.parentElement;
+    if (event.srcElement instanceof HTMLButtonElement) {
+      element = event.srcElement;
+    }
+    console.log(element);
+    var answer = this.validQuestionsAndAnswers[question]["answer"];
+    if (element.children[0].innerHTML == answer) {
+      element.style.backgroundColor = 'green';
+    } else {
+      element.style.backgroundColor = 'red';
+    }
   }
 
 }

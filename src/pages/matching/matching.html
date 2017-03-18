@@ -24,7 +24,7 @@
       {{q}}
     </ion-card-header>
     <ion-card-content>
-      <button ion-button round *ngFor="let a of validQuestionsAndAnswers[q]['choices']" (click)="verifyChoice($event, q, a)">{{a}}</button>
+      <button ion-button round *ngFor="let a of validQuestionsAndAnswers[q]['choices']" (click)="verifyChoice($event, q)">{{a}}</button>
     </ion-card-content>
   </ion-card>
 </ion-content>
