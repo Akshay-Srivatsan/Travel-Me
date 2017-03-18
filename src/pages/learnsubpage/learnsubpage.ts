@@ -22,7 +22,7 @@ export class LearnSubpagePage {
       'Sorry':'Lo siento',
       'Do you speak ___?':'Hablas tú ___?',
       'Excuse me':'Perdón',
-      'Hello I am ____':'Hola yo me llamo ___.',
+      'Hello I am ___':'Hola yo me llamo ___.',
       'Where is the bathroom?':'Dónde está el baño?',
       'I need a phone.':'Yo necessito un teléphono',
     },
@@ -238,6 +238,6 @@ export class LearnSubpagePage {
 
   playAudio(item) {
     console.log(item)
-    new Audio('assets/' + item + '.m4a').play();
+    new Audio('assets/' + item.replace('?', '') + '.m4a').play();
   }
 }
