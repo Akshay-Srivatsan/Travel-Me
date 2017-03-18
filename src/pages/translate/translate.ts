@@ -13,22 +13,22 @@ export class TranslatePage {
     console.log("Translate");
   }
 
+  tr() {
+    var englishElement = document.getElementById("english").children[0] as HTMLInputElement;
+    this.translate(englishElement.value);
+  }
+
   translate(text) {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-        console.log(xhr.responseText);
+        var spanish = document.getElementById("spanish");
+        spanish.innerText = xhr.responseText;
       }
     }
-    xhr.open('GET', 'https://crossorigin.me/https://gateway.watsonplatform.net/language-translator/api/v2/translate');
-    var username = "6051df59-03cc-4ef8-afab-52f3b1f4145c";
-    var password = "jn6OpyKtyR3h";
+    xhr.open('GET', '/translate?text=' + encodeURIComponent(text));
 
-
-    var params = JSON.stringify({ source: "en", target: "es", text: text });
-    xhr.setRequestHeader("Authorization", "Basic " + btoa(username + ":" + password))
-    xhr.setRequestHeader("Origin", "aks.io")
-    xhr.send(params)
+    xhr.send()
   }
 
 }
