@@ -4,8 +4,27 @@
   </ion-navbar>
 </ion-header>
 
+<ion-header>
+
+  <ion-navbar id="homelogo">
+    <ion-title>TRAVEL ME</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
 <ion-content padding>
+  
+  <ion-card>
+    <ion-card-content>
+      <img id="logo" src="/assets/travelmelogo.png"/>
+
+    </ion-card-content>
+  </ion-card>
+
  <button class="bigbutton" style="padding: 70px" ion-button color=light (click)="goToLearn()" full>Learn</button>
  <button class="bigbutton" style="padding: 70px" ion-button color=light (click)="goToPractice()" full>Practice</button>
  <button class="bigbutton" style="padding: 70px" ion-button color=light (click)="goToTranslate()" full>Translate</button>
+
+
+
 </ion-content>

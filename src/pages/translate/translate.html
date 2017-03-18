@@ -7,11 +7,19 @@
 </ion-header>
 
 <ion-content>
-   <ion-item>
+
+  <ion-card>
+    <ion-card-content>
+      <img id="IBM" src="/assets/IBM.png"/>
+
+    </ion-card-content>
+  </ion-card>
+
+   <ion-item id="inputbox">
     <ion-label floating>English Text</ion-label>
     <ion-input type="text" id="english"></ion-input>
   </ion-item>
-  <button ion-button icon-right (click)="tr()">
+  <button id="buttonbutton" ion-button icon-right (click)="tr()">
     Translate
     <ion-icon name="refresh"></ion-icon>
   </button>

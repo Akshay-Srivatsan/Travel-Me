@@ -16,7 +16,7 @@ export class LearnSubpagePage {
   phrases = {
     "General Phrases": {
       'Thank you':'Gracias',
-      'Yes':'Si',
+      'Yes':'Sí',
       'No':'No',
       'Please':'Por favor',
       'Sorry':'Lo siento',
