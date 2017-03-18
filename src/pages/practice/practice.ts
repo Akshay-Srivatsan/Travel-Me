@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
+import { FillInTheBlankPage } from "../fillintheblank/fillintheblank";
 
 @Component({
   selector: 'page-PracticePage',
@@ -13,9 +14,8 @@ export class PracticePage {
   }
 
   loadFillInTheBlank() {
-  this.navCtrl.push(,{
-    category: item
-  })
+    this.navCtrl.push(FillInTheBlankPage),{
+    }
 
   }
 
