@@ -235,4 +235,8 @@ export class LearnSubpagePage {
     this.phraseKeys = Object.keys(this.specificPhrases);
 
   }
+
+  playAudio() {
+    new Audio('assets/ThankU.m4a').play();
+  }
 }

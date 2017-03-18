@@ -20,13 +20,14 @@ export class TranslatePage {
         console.log(xhr.responseText);
       }
     }
-    xhr.open('GET', '/api');
+    xhr.open('GET', 'https://crossorigin.me/https://gateway.watsonplatform.net/language-translator/api/v2/translate');
     var username = "6051df59-03cc-4ef8-afab-52f3b1f4145c";
     var password = "jn6OpyKtyR3h";
 
 
     var params = JSON.stringify({ source: "en", target: "es", text: text });
     xhr.setRequestHeader("Authorization", "Basic " + btoa(username + ":" + password))
+    xhr.setRequestHeader("Origin", "aks.io")
     xhr.send(params)
   }
 

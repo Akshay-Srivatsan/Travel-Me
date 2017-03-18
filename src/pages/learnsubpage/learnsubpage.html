@@ -12,9 +12,10 @@
 
       <ion-card-header >
         {{item}}
-        <button class="megaphoneButton" ion-button icon-left item-right>
+        <button class="megaphoneButton" ion-button icon-left item-right (click)="playAudio()">
          <ion-icon name="megaphone"></ion-icon>
         </button>
+
       </ion-card-header>
 
       <ion-card-content>
