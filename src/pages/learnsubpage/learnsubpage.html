@@ -8,8 +8,16 @@
 
 <ion-content>
   <ion-item-group>
-    <ion-item *ngFor="let item of categoryPhrases" (click)="goToSubpage(item) ">
-      {{ item }}
-    </ion-item>
+    <ion-card *ngFor="let item of phraseKeys">
+
+      <ion-card-header>
+        {{item}}
+      </ion-card-header>
+
+      <ion-card-content>
+        {{specificPhrases[item]}}
+      </ion-card-content>
+
+    </ion-card>
   </ion-item-group>
 </ion-content>
