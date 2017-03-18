@@ -3,13 +3,14 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 @Component({
-  selector: 'page-about',
-  templateUrl: 'about.html'
+  selector: 'page-TranslatePage',
+  templateUrl: 'translate.html'
 })
-export class AboutPage {
+export class TranslatePage {
 
   constructor(public navCtrl: NavController) {
 
+    console.log("Translate");
   }
 
 }

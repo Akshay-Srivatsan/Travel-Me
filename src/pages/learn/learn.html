@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Learn
+      </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-item-group>
+    <ion-item *ngFor="let item of subpages" (click)="goToSubpage(item) ">
+      {{ item }}
+    </ion-item>
+  </ion-item-group>
+</ion-content>
