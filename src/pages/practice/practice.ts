@@ -13,9 +13,12 @@ export class PracticePage {
   }
 
   loadFillInTheBlank() {
+  this.navCtrl.push(,{
+    category: item
+  })
 
   }
-  
+
   loadMatchingGame() {
 
   }
