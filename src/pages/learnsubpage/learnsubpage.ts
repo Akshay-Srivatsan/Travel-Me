@@ -237,13 +237,8 @@ export class LearnSubpagePage {
 
   }
 
-<<<<<<< Updated upstream
   playAudio(item) {
     console.log(item)
     new Audio('assets/' + item.replace('?', '') + '.m4a').play();
-=======
-  playAudio() {
-    new Audio('assets/ThankU.m4a').play();
->>>>>>> Stashed changes
   }
 }
