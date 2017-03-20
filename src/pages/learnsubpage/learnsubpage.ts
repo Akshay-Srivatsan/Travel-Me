@@ -245,6 +245,8 @@ export class LearnSubpagePage {
     if (this.audio) {
       this.audio.pause()
       this.lastPhrase = ""
+      this.audio = null;
+      return;
     }
     if (item == this.lastPhrase) {
       this.lastPhrase = "";
@@ -252,6 +254,15 @@ export class LearnSubpagePage {
       this.audio = new Audio('assets/' + item.replace('?', '') + '.m4a');
       this.audio.play();
       this.lastPhrase = item;
+    }
+  }
+
+  ionViewDidLeave() {
+    if (this.audio) {
+      this.audio.pause()
+      this.lastPhrase = ""
+      this.audio = null;
+      return;
     }
   }
 }
