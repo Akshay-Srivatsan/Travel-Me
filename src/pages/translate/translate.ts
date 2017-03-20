@@ -1,6 +1,7 @@
+import * as ionic from 'ionic';
 import { Component } from '@angular/core';
 
-import { NavController } from 'ionic-angular';
+import {Platform, NavController} from 'ionic-angular';
 
 @Component({
   selector: 'page-TranslatePage',
@@ -8,14 +9,17 @@ import { NavController } from 'ionic-angular';
 })
 export class TranslatePage {
 
-  constructor(public navCtrl: NavController) {
+  public platform: Platform;
 
+  constructor(public navCtrl: NavController, public plt: Platform) {
+    this.platform = plt;
     console.log("Translate");
   }
 
   tr() {
     var englishElement = document.getElementById("english").children[0] as HTMLInputElement;
     this.translate(englishElement.value);
+
   }
 
   translate(text) {
@@ -26,7 +30,11 @@ export class TranslatePage {
         spanish.innerText = xhr.responseText;
       }
     }
-    xhr.open('GET', '/translate?text=' + encodeURIComponent(text));
+    var url = 'https://travelme.mybluemix.net/translate'
+    if (this.platform.is('mobileweb') || this.platform.is('core')) {
+      url = '/translate'
+    }
+    xhr.open('GET', url + '?text=' + encodeURIComponent(text));
 
     xhr.send()
   }
