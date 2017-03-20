@@ -244,6 +244,7 @@ export class LearnSubpagePage {
     console.log(item)
     if (this.audio) {
       this.audio.pause()
+      this.lastPhrase = ""
     }
     if (item == this.lastPhrase) {
       this.lastPhrase = "";
