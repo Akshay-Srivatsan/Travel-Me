@@ -13,6 +13,9 @@ export class LearnSubpagePage {
   public specificPhrases: any;
   public phraseKeys: any;
 
+  public audio: HTMLAudioElement;
+  public lastPhrase: String;
+
   phrases = {
     "General Phrases": {
       'Thank you':'Gracias',
@@ -239,6 +242,15 @@ export class LearnSubpagePage {
 
   playAudio(item) {
     console.log(item)
-    new Audio('assets/' + item.replace('?', '') + '.m4a').play();
+    if (this.audio) {
+      this.audio.pause()
+    }
+    if (item == this.lastPhrase) {
+      this.lastPhrase = "";
+    } else {
+      this.audio = new Audio('assets/' + item.replace('?', '') + '.m4a');
+      this.audio.play();
+      this.lastPhrase = item;
+    }
   }
 }
